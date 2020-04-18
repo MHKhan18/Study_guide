@@ -1,0 +1,11 @@
+Access: O(1)
+Search: O(n)
+Insertion: O(n) // copying elements
+Appending: O(1) //cost is spread over
+Deletion: O(n)
+
+#) intersesting use cases:
+i) lookup tables and inverse lookup tables
+ii) returning mutiple values from a function
+iii) used in dynamic programming to cache answers to subproblems.
+
