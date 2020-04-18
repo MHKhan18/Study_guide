@@ -1,0 +1,43 @@
+
+#Use cases:
+i) List, Queue and Stack implementation
+ii) creating circular lists
+iii) modelling real world objects: e.g. train
+iv) separate chaining -> hashtable implementation
+v) adjacency lists for graphs.
+
+# Singly Linked List vs Doubly Linked List:
+-> Singly Linked List:
+*)Pros:
+i) Uses less memory
+ii) Simpler implementation
+*)Cons:
+i) Can't easily access previous elements
+
+->Doubly Linked List:
+*)Pros:
+i) Can be traversed backward
+*)Cons:
+i) Takes 2x memory
+
+
+**) always need to maintain head reference
+    ( and tail for doubly linked list)
+
+----------------------
+#) Complexity:
+Search: O(n)
+Insert at head: O(1)
+Insert at tail: O(1)
+Remove at head: O(1)
+Remove at tail: O(n) for SLL and O(1) for DLL
+Remove in middle: O(n)
+
+-------------------------
+#) Iterators:
+-pointers before nodes
+- next() and previous()
+
+-------------------------
+#)Sentinels:
+- dummy nodes to avoid edgecases
