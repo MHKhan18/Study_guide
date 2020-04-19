@@ -1,0 +1,31 @@
+Hash Table:
+- maps keys to values using hashing
+- keys must be unique, values need not be
+
+*) Hash function:
+- Maps a key to a whole number in a fixed range
+- hash functions for arbitrary objects such as strings,tuples etc.
+- keys must be immutable -> to make them hashable ( deterministic)
+
+*)Properties of hash functions:
+i)If H(x)=H(y), then x may equal y
+but if H(x)!=H(y), then x and y are certainly not equal
+ii) must be deteministic
+iii) best effort to make uniform hash functions to minimize number of hash collisions
+*)Hash collision: when two objects hash to same value
+*) uniform functions: all the values in the range of the function are hit
+
+Insertion:  Average: O(1) Worst: O(n)
+Lookup: Average: O(1) Worst: O(n)
+Removal: Average: O(1) Worst: O(n)
+
+==> Use hash function as a way to index into a hash table
+*)hash table = array
+*) O(1) given hash function is fully uniform
+
+#) Separate Chaining: deals with hash collisions by maintaining a data structure ( usually a linked list) to hold all the different values which hashed to a particular value
+#) Open addressing: deals with hash collisions by finding another place within the hash table for the object to go by offsetting it from the position to which it hashed to.
+-> most randomly selected probing sequences modulo N will produce a cycle shorter than table size => infinite loop
+-> We restrict the domain of probing functions to those which produce a cycle of exactly length N, i.e. very specific functions
+-> Linear probing, quadratic probing, double hashing
+
