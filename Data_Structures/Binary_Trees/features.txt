@@ -1,0 +1,49 @@
+
+*)Definition:
+A tree is an undirected graph which satisifes any of the following definitions:
+1) An acyclic connected graph
+2) A conncected graph with N nodes and N-1 edges
+3) A graph in which any two nodes are connected by exactly one path.
+
+*) Any node can root the tree.
+*) A node can have multiple children but only one/zero parent node
+*) The parent of the root is the root (e.g. file system)
+*) subtree can be single node
+
+#) Complexity:
+Insert, Delete, Remove, Search - Average: O(log(n)) Worst: O(n)
+
+*) Removing from BST:
+i) Find the element we wish to remove
+2) Replace the node we want to remove with its successor to maintain the BST invariant
+
+#) Cases:
+i) node to remove is leaf ndoe
+ii) node to remove has one child
+iii) node to remove has two child:
+     the successor can be the largest value on the left subtree or 
+     the smallest value on the right subtree
+
+##) Tree Traversals:
+
+1) Preorder:
+     Visit Node
+     Preoder left subtree
+     Preorder right subtree
+
+2) Inorder:
+     Inorder left subtree
+     Visit node
+     Inorder right subtree
+
+3) Postorder:
+    Postorder left subtree
+    Postorder right subtree
+    Visit node
+     
+
+4) Level order:
+    - maintain a queue 
+    - basically, a BFS
+
+Preorder, Inorder and Postorder are DFS.
