@@ -1,0 +1,32 @@
+
+*) Comparison sorts have a lower bound of nlog(n)
+   
+*) Quadratic sorts - i) bubble sort , ii) selection sort, iii) insertion sort
+
+*) Merge Sort:
+   - O(nlogn) worst case
+   - Uses O(n) extra space
+   - Stable sort 
+
+*) Heap sort:
+   - O(nlogn) worst case, high constants
+   - In-place sort
+
+*) Quick sort:
+   - O(nlogn) average case, O(n^2) worst case
+   - Randomization to select pivot, worst case not triggered without dupicates
+   - In-place 
+   - Best performance in practice
+
+=========================
+
+*) Counting sort:
+  - Not comparison sort
+  - Only applicable to integers(positive) in a defined range
+  - Uses extra space
+  - O(n) // O(n+k)
+  - Stable sort: 
+        Numbers with the same value appear in the output array 
+        in the same order as they do in the input array
+
+
