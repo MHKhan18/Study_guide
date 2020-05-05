@@ -1,4 +1,4 @@
-package binary_trees;
+package Binary_Trees;
 
 public interface SearchTree<E> {
 	

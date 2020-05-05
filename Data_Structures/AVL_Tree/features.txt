@@ -1,0 +1,44 @@
+*)Insertion, Removal, Update in a binary search tree 
+  in avaerage case is O(log(n))
+  but can degrade to O(n) in worst case.
+
+*)But these oprations are guaranteed to be O(log(n))
+ in Balanced Binary Search Trees.
+
+*) The secret ingredient to most BBST algorithms
+    i) Tree invariant
+    ii) Tree rotations
+
+*) Tree invarinat:
+    - is a property/rule imposed on the tree that must be met 
+    after every operation.
+    - To ensure that the invariant is always satisfied a series
+      of tree rotations are normally applied.
+     
+*) Tree rotations are valid since they preserve binary search 
+   tree invariant. The structure of the tree does not matter.
+
+*) Tree nodes can have 2 or 3 nodes.
+   3 nodes -> including parent pointer
+
+===================================================
+===================================================
+
+#) AVL Tree invariant:
+
+*) Balanced Factor(BF):
+   BF(node) = Height(node.right) - Height(node.left)
+
+*) Height: Number of edges between root and furthest leaf
+
+*) The balanced factor must always be either -1,0, or 1
+
+*) Insertion:
+   4 cases:
+   i) left-left: right rotation
+   ii) left-right: left rotation, right rotation
+   iii) right-right: left rotation
+   iv) right-left:  right rotation, left rotation
+  -> all rotations on the heavy child
+
+

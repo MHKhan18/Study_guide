@@ -1,4 +1,4 @@
-package binary_trees;
+package Binary_Trees;
 
 public class BinarySearchTree<E extends Comparable<E>>extends BinaryTree<E> implements SearchTree<E> {
 	
@@ -174,7 +174,7 @@ public class BinarySearchTree<E extends Comparable<E>>extends BinaryTree<E> impl
 		return deleteReturn != null;
 	}
 	
-	public static void main ( String[] args) {
+	/* public static void main ( String[] args) {
 		BinarySearchTree<Integer> bst = new BinarySearchTree<>();
 		bst.add(5);
 		bst.add(3);
@@ -182,6 +182,6 @@ public class BinarySearchTree<E extends Comparable<E>>extends BinaryTree<E> impl
 		System.out.println(bst.toString());
 		BinaryTreePrinter.printNode(bst.root);
 		
-	}
+	} */
 	
 }
