@@ -1,0 +1,14 @@
+##)Usually, solving and fully understanding a dynamic programming problem is a 4 step process:
+
+1)Start with the recursive backtracking solution
+2)Optimize by using a memoization table (top-down dynamic programming)
+3) Remove the need for recursion (bottom-up dynamic programming)
+4) Apply final tricks to reduce the time / memory complexity
+
+=>Top-down to bottom-up conversion is done by eliminating recursion. In practice, this achieves better performance as we no longer have the method stack overhead and might even benefit from some caching. More importantly, this step opens up possibilities for future optimization. The recursion is usually eliminated by trying to reverse the order of the steps from the top-down approach.
+
+#) Steps to memoization:
+1) Make a helper function and pass in an empty dictionary/array
+2) If key is in the dictionary/array, return the associated value
+3) Do the work recursively and store the result in a local variable
+4) Store the result in the dictionary and return the result.
