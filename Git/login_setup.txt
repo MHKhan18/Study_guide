@@ -1,1 +1,2 @@
-git remote set-url origin git@github.com:username/repo.git
+# command to stop requiring repeated authentication
+git remote set-url origin git@github.com:<username>/<repo>.git
