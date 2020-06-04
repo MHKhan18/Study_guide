@@ -34,7 +34,7 @@ def build_max_heap(arr): # O(n)
 
 
 def heapsort(array):
-    '''O(log n), in-place sorting algorithm'''
+    '''O(n log n), in-place sorting algorithm'''
     build_max_heap(array)
     heap_size = len(array)
     for i in range(len(array)-1,0,-1):
