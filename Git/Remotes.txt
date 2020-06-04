@@ -1,0 +1,42 @@
+1)git clone (URL):
+  Retrieve/Clone a repo
+
+2)git remote (-v for detail):
+  List remotes
+
+3)git log --all --decorate --oneline --graph :
+  Commit graph
+
+4)git checkout :
+  Checkout a branch
+
+5)git checkout -b (branch name) :
+  Create and checkout a branch
+
+6)git fetch (remote name) :
+  Retrieve/download from a remote
+
+7)git merge (branch or tracking branch name) :
+  merge branch or tracking-branch
+
+8)git status :
+  Show status
+
+9)git push (remote name) (branch name):
+  Upload to a remote
+
+10)git add (filename) :
+   stage an edit
+
+
+11)git commit -m "description" :
+   make a commit 
+
+12)git commit -a -m "description" :
+   stage and commit
+
+13) git branch :
+    List local branches
+
+14) git branch -r:
+   List both local and remote branches = git branch -a

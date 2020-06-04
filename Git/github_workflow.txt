@@ -1,0 +1,38 @@
+
+
+#) contributing to a project:
+------------------------------
+i) Fork the target repo
+ii) clone the repo in desired directory
+iii) add upstream remote
+iv) create and checkout new branch
+v) do work!
+vi) add and commit changes
+vii) push the newly created branch to origin
+viii) open a pull request
+ix) if merged in upstream, merge the newly created branch with master locally as well. Delete the branch locally and in origin with --delete <new branch> .
+x) pull from upstream
+
+
+#) staying in sync with upstream:
+------------------------------------
+i) update local copy by pulling from upstream
+ii) update origin by pushing the changes
+
+
+#) own git hub page:
+-----------------------
+i) create a folder and initialize git by git init
+ii) add and commit changes
+iii) create a repo on github.com with same name as the folder
+iv) add remote origin with the url of the newly created repo
+v) push to remote origin !
+
+#) version control only within own computer:
+----------------------------------------------
+i) create a folder and initialize git by git init
+ii) add and commit each time the file(s) are updated
+iii) previous versions can be retireived from commit graph
+iv) branches can be created and merged !
+
+

@@ -1,0 +1,12 @@
+
+#) to resolve a merge conflict:
+
+1) checkout the branch you are pushing and causing the conflict
+2) git pull origin master
+   -> pull down the updated version of the branch into which you are trying to merge your branch (typically master)
+
+3) go to text editor and look for git markers. Decide what changes to keep or discard and remove the markers and save the file(s)
+
+4) git add .
+5) git commit 
+6) git push 

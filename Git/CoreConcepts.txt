@@ -1,0 +1,38 @@
+#Core concepts:
+
+1)git init : 
+initialize a new repo in a directory
+
+2)git config --global user.name "name"
+  git config --global user.email "email"
+  (--local option as well)
+
+3)git status :
+see the state of files in working tree, staging area vs latest commit in git history
+
+4)git add :
+move file(s) to the staging area
+
+5)git log :
+view the git history / git commit graph
+
+6)git diff :
+diff of working tree and staging area
+ 
+ git diff --cached :
+ diff of staging area and latest commit
+
+7)git rm :
+  remove a file from the working tree and the staging area
+
+8)git checkout -- filename :
+  retrieve a file from the staging area into the working tree
+
+9)git reset HEAD filename : 
+  retrieve a file from the latest commit into the staging area
+
+10)git checkout (commit hash) filename :
+   retrieve a file from a previous commit ( to working tree and staging area )
+
+11) git help <verb>
+    git <verb>--help

@@ -1,0 +1,69 @@
+1)git log :
+ (commit)  git history
+
+2)git log --all --decorate --oneline --graph :
+  commit history graph
+
+3)git branch (branch-name) :
+  create a branch
+
+4)git checkout (branch-name) :
+  checkout a branch/move head pointer
+
+5)git commit -a -m "commit message" :
+  commit all modified and tracked files in on command (bypass separate 'git add' command)
+
+6)git diff master..SDN :
+   diff between 2 branches
+
+7)git merge (branch-name) :
+  merge branches (fast-forward and 3-way merges) **(from masster)
+
+8)git branch --merged :
+  see branches merged into the current branch
+
+9)git branch -d (branch-name) :
+  delete a branch, only if already merged
+ 
+  git branch -D (branch-name) :
+  delete a branch, including if not already merged (exercise caution here)
+
+10)git merge --abort : abort a merge during a merge conflict situation
+
+11)git checkout (commit-hash) :
+   checkout a commit directly, not through a branch, results in a detached HEAD state
+
+12)git stash :
+   create a stash point
+
+13)git stash list :
+   list stash points
+ 
+14)git stash list -p :
+  list stash points and show diffs per stash
+
+15)git stash apply :
+   apply most recent stash
+
+16)git stash pop :
+  apply most recent stash, and remove it from saved stashes
+
+17)git stash apply (stash reference) :
+   apply a specific stash point
+
+18)git stash save "(description)" :
+   create a stash point, be more descriptive
+
+
+Q. What is git stash?
+
+In GIT, sometimes we do not want to commit our code but we do not want to lose also the unfinished code. 
+In this case we use git stash command to record the current state of the working directory and index in a 
+stash. This stores the unfinished work in a stash, and cleans the current branch from uncommitted changes. 
+
+Now we can work on a clean working directory. 
+
+Later we can use the stash and apply those changes back to our working directory.
+
+At times we are in the middle of some work and do not want to lose the unfinished work, we use git stash
+ command.
