@@ -1,0 +1,28 @@
+
+
+
+ **** Trie || Prefix Tree *****
+#) Use cases:
+- Word validation
+- Autocomplete
+- Spell checker
+- Word games
+
+#) Adept at:
+- Finding all keys with a common Prefix
+- Enumerating a dataset of strings in lexicographic order
+
+#) Insertion:
+- Time complexity : O(m), m is key length
+- Space complexity: O(m)
+
+
+#) Search:
+- Time complexity: O(m)
+- Space complexity: O(1)
+
+
+
+
+
+
