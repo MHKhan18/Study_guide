@@ -1,0 +1,39 @@
+
+
+#) Typical Use Cases:
+===================================
+
+- Kruskal's minimum spanning tree
+- Grid percolation
+- Network connectivity
+- Least common ancestor in trees
+- Image processing
+
+
+
+#) Complexity:
+======================
+
+Construction -      O(n)
+Union        -      a(n) --> amortized constant time
+Find         -      a(n)
+Get compnent size - a(n)
+Check if connected - a(n)
+Count compnents    - O(1)
+
+*) Find:
+- To find which component a particular element belongs to,
+find the root of that compnent by following the parent nodes 
+until a self loop is reached 
+- in path compression, after the root is found, 
+each node on the path to root is set to have the root as direct parent
+
+*) Union:
+To unify two elements, find the root nodes of each component and 
+if they are different, make one of the root nodes to be the parent
+of the other.
+
+
+
+
+
