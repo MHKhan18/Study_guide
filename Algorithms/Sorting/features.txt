@@ -29,4 +29,10 @@
         Numbers with the same value appear in the output array 
         in the same order as they do in the input array
 
+*)Bucket Sort:
+   - assumes input is drawn from a uniform distribution
+   - average case / expected [not worst case] running time: O(n)
+   - uses additional space
+   - 0 <= A[i] < 1 , can be adapted for any range
+
 
