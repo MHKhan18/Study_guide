@@ -1,0 +1,38 @@
+
+#) resources:
+i) https://www.dataquest.io/blog/python-api-tutorial/
+ii) https://www.dataquest.io/blog/last-fm-api-python/
+
+#) python:
+
+-> requests library:
+response = requests.get(<url>)
+response.status_code
+response.json()
+
+-> json:
+* json.dumps() : python to json
+* json.loads() : json to python
+
+
+#) api parameters:
+ - pass parameters as dictionary to avoid syntax issues
+ - "params" keyword argument in requests.get()
+ - the keys should be the parameter keywords mentioned in the api doc and the values are the inputs
+ *) "user-agent" can be specified in "headers"
+
+#) api authentication:
+- mainly two methods:
+	i) api key
+	ii) OAuth
+- make sure to not to expose API keys
+
+
+
+#) rate-limiting:
+- use sleep() function
+- cache results in local database
+
+#)pagination:
+- use loop to make request for all the pages
+
