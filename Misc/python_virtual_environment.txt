@@ -1,0 +1,28 @@
+1. install virtualenv:
+    `pip install virtualenv`
+
+2. create the virtual environment and specify the python version you want to use:
+    `virtualenv -p python3 venv` 
+     here , "venv" is the name given
+
+3. activate the virtual environment:
+   - in mac/linux:
+    	`source venv/bin/activate`
+   - in windows:
+   		`source venv/Scripts/activate`
+
+
+4. install requirements:
+    `pip install -r requirements.txt`
+
+5. to deactivate venv:
+    `deactivate`
+
+6. to get list of installed packages, do:
+   `pip freeze`
+   now, copy the list and paste into requirements.txt
+
+7. make sure not to commit the venv folder
+
+8. when completely done with the project, delete the venv to free up hard drive space
+     command: `rmdir venv /s`
