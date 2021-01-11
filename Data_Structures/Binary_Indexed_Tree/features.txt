@@ -1,0 +1,30 @@
+
+Binary Indexed Tree / Fenwick Tree:
+
+#) Motivation:
+    - Given an array of integer values, compute the range sum between indices [i,j)
+    -> Prefix sum array is great for static arrays, but takes O(n) for updates
+
+#) The idea:
+    - Unlike a regular array, in a Fenwick tree a specific cell is reponsible for other cells as well.
+    - The position of the least significant bit (LSB) [right-most 1 in binary rep.] 
+        determines the range of reponsibility that cell has to the cells below itself.
+        i.e. it stores the sum of the cells it is reponsible for.
+
+*) Linear construction:
+    Add the value in the current cell to the immediate cell that is reponsible for us.
+    This resembles what we did for point updates but only one cell at a time.
+
+    This will make the 'cascading' effect in range queries possible by propagating the 
+    value in each cell throughout the tree.
+
+*) BIT is 1 Indexed
+
+#) Run time complexities:
+    Construction: O(n)
+    Point update: O(log n)
+    Range sum: O(log n)
+    Range update: O(log n)
+    Add index: N/A
+    Remove indx: N/A
+
