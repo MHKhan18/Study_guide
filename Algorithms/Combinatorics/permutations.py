@@ -1,4 +1,6 @@
 
+# number of permutations of |arr| == n: n!
+
 import json 
 
 def get_permutations(arr):

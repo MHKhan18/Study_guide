@@ -1,4 +1,6 @@
 
+# number of combinations of len l of set len n = n ! / l! * (n-l)!
+
 def get_combinations(characters , comb_len):
 
     combinations = []
