@@ -28,3 +28,5 @@ Binary Indexed Tree / Fenwick Tree:
     Add index: N/A
     Remove indx: N/A
 
+*) Applicable only on invertible functions (like subtraction/ addition, not min/max etc.)
+

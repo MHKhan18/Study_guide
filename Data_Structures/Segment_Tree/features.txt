@@ -7,4 +7,4 @@ So, space complexity: O(N), N = number of Nodes
 Construction: O(N)
 Update / Query : O(log N)
 
-*) Applicable on any invertible/bijective function (sum , max/min etc.) 
+*) Does not have to be invertible functions, so min/max can be found
