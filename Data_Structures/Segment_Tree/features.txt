@@ -1,0 +1,10 @@
+
+1 + 2 + 2^2 + ... + 2^h = 2^(h+1) - 1
+2^h = N 
+Total Nodes = 2*2^h - 1 = 2N - 1
+So, space complexity: O(N), N = number of Nodes
+
+Construction: O(N)
+Update / Query : O(log N)
+
+*) Applicable on any invertible/bijective function (sum , max/min etc.) 
