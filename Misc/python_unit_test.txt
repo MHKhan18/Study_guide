@@ -1,0 +1,51 @@
+0) import unittest
+   class Test*(unittest.TestCase):
+   		##
+
+   	if __name__ == "__main__":
+   		unittest.main()
+
+
+
+1) test methods must start with the word "test", e.g. 
+		def test_*(self):
+				##
+
+2) def setUp(self): 
+		##
+
+	and 
+
+   def tearDown(self): 
+   		## 
+	
+   are run before and after every test.
+
+
+
+3) @classmethod 
+ 	def setUpClass(cls):
+ 		##
+ 	and
+
+ 	@classmethod
+ 	def tearDownClass(cls):
+ 		##
+
+ 	are run at the start and end of entire test suite.
+
+
+ 4) Mocks:
+
+#) Problems that mocks solve:
+
+i) eliminate dependencies in the class under test
+ii) test methods that have no return value
+iii) tests error handling
+iv) eliminate dependencies on database calls
+v) reduce test complexity
+vi) don't have to wait to implement other methods
+
+--> patch function in mock library
+--> can be used either as decorators or context managers
+
