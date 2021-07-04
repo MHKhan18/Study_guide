@@ -9,9 +9,15 @@ def dfs(graph):
 
         visited.add(vertex)
 
+        # previsit 
+
         for neighbor in graph[vertex]:
             if neighbor not in visited:
-                dfs_util(neighbor)
+                dfs_util(neighbor) # tree edge
+            
+            # else: backedge
+
+        # post visit
 
     for vertex in graph:  # disconnected graphs
         if vertex not in visited:

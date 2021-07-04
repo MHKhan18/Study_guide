@@ -1,0 +1,40 @@
+
+# Run-time of DFS: 
+    O(|V| + |E|)
+    - |V| = dfs is called on each vertex exactly once and fixed amount of work in each dfs call
+    - |E| = each edge {x,y} is examined exactly twice over the entire dfs [aggregate of all loops]
+
+
+# Property:
+For any nodes u and v, the two intervals [pre(u);post(u)] and [pre(v);post(v)] are
+either disjoint or one is contained within the other.
+
+
+# Edges in search tree of directed graph:
+* Tree edges:
+     are actually part of the DFS forest.
+* Forward edges:
+     lead from a node to a nonchild descendant in the DFS tree.
+
+* Back edges:
+     lead to an ancestor in the DFS tree.
+* Cross edges:
+     lead to neither descendant nor ancestor; they therefore lead to a node 
+     that has already been completely explored (that is, already postvisited).
+
+
+# Directed Acyclic Graph (DAG):
+
+    1) A directed graph has a cycle if and only if 
+       its depth-first search reveals a back edge.
+
+    2) In a dag, every edge leads to a vertex with a lower post number.
+
+    3) Every dag has at least one source (a node with no incoming edges) and 
+                     at least one sink (no outgoing edges)
+
+
+    
+# Connectivity in Directed Graphs:
+Two nodes u and v of a directed graph are connected if there is a path from u to v
+and a path from v to u.
