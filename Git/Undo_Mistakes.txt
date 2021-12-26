@@ -1,0 +1,87 @@
+
+1) Discard all local changes in a file:
+    git restore <file_name>
+
+2) Restoring deleted files:
+    git restore <file_name>
+
+3) Discard chunks / lines in a file:
+    git restore -p <file_name>
+
+4) Discarding all local changes:
+    git restore .
+
+5) Fixing last commit:
+    git commit --amend -m "correct"
+        -> above changes the last commit message
+        -> to change last commit, just stage the changes and run the above command
+
+6) Reverting a commit in the middle:
+    git revert <hash_of_commit_to_be_undone>
+    -> "git revert" creates a new commit that reverts the effects of a specified commit
+    -> introduces opposite changes to undo the changes of a specific commit 
+
+7) Resetting to an old version:
+    git reset --hard <hash_of_commit_to_go_back_to>
+    git reset --mixed <hash_of_commit_to_go_back_to>
+    -> discards all commits in git history after the specified commit
+    -> "hard" option denotes that no local changes should survive  
+    -> "mixed" option denotes that the changes in the discarded commits will be available as local changes
+
+8) Resetting a file to an old revision:
+    git restore --source <hash_of_commit_to_retrieve_file_from> <file_name>
+    -> git log -- <file_name> : get list of all commit hashes relevant to a file 
+
+9) Recovering deleted commits: (undo reset)
+    git reflog
+    git branch <new_branch> <commit_hash_before_reset_obtained_from_reflog>
+    -> reflog is journal keeping track of every movement of the HEAD pointer 
+
+10) Recovering a deleted branch: (consider an unmenrged one!)
+    git reflog 
+    git branch <new_branch> <hash_representing_HEAD_before_branch_deletion>
+
+11) Moving a commit to a new branch: (e.g. accidental commit in main)
+    git branch <new_branch>
+    git reset --hard HEAD~<#num_commits_to_go_back> 
+
+12) Moving a commit to a different (existing) branch:
+    git checkout <target_branch>
+    git cherry-pick <hash_of_commit_to_move>
+    git checkout <branch_the_commit_is_currently_in>
+    git reset --hard HEAD~1 
+
+13) Editing old commit messages:
+    git rebase -i HEAD~<num_commits_to_go_back>
+    -> use "reword" option
+
+14) Deleting an old commit:
+    git rebase -i HEAD~<num_commits_to_go_back>
+    -> use "drop" option
+
+15) Squahs multiple commits into one:
+    git rebase -i HEAD~<num_commits_to_go_back>
+    -> use "squah" option
+
+16) Adding a change to a new commit:
+    git commit --fixup <hash_of_commit_to_fix>
+    git rebase -i --autosquash HEAD~<num_commits_to_go_back>
+
+# The caret refers to the parent of a particular commit. E.g. HEAD^ refers to the parent of the current HEAD commmit. (also, HEAD^^ refers to the grandparent).
+
+17) Splitting/editing an old commit:
+    -> rebase, edit , reset , commit
+    git fetch origin
+    git rebase -i origin/main
+    -> use "edit" option on desired commit, save and exit 
+    git reset --mixed HEAD^
+    -> changes in the target commit are available as working tree changes now. stage and commit separately as needed
+    git rebase --continue
+
+
+18) To Force Sync with Remote:
+    git fetch --all
+    git reset --hard origin/main
+
+19) To see stashed content:
+    git stash show -p stash@{<num>}
